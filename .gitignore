@@ -1,0 +1,16 @@
+haskell/.stack-work/
+
+.idea/
+
+# c
+*.out
+
+# haskell
+
+
+# rust
+rust/target/
+
+# scala
+scala/project/target/
+scala/target/

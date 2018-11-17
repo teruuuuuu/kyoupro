@@ -1,0 +1,6 @@
+[package]
+name = "kyoupro"
+version = "0.1.0"
+authors = ["arimuraterutoshiMac <arimuraterutoshi@192.168.11.6>"]
+
+[dependencies]
