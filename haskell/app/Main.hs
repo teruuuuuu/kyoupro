@@ -1,7 +1,8 @@
 module Main where
 import Text.Printf
 
-import AtCoder.Beginner.Q111.D
+-- import AtCoder.Beginner.Q111.D
+import TopCoder.CrazyBot.CrazyBot
 
 main :: IO ()
 main = do

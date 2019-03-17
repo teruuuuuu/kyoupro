@@ -25,6 +25,7 @@ library
                        , AtCoder.Beginner.Q111.B
                        , AtCoder.Beginner.Q111.C
                        , AtCoder.Beginner.Q111.D
+                       , TopCoder.CrazyBot.CrazyBot
   build-depends:       base >= 4.7 && < 5
                        , aeson
                        , aeson-pretty

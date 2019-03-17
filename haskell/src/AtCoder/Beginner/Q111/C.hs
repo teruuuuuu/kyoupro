@@ -1,6 +1,5 @@
 module AtCoder.Beginner.Q111.C where
 
-
 import Data.List as L
 import Data.IntMap as M
 
