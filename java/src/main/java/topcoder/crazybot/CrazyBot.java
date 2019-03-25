@@ -2,8 +2,9 @@ package topcoder.crazybot;
 
 import java.util.Scanner;
 
-
-
+/**
+ * https://community.topcoder.com/stat?c=problem_statement&pm=10095
+ */
 public class CrazyBot {
   boolean[][] grid = new boolean[100][100];
   int vx[] = {1, -1, 0, 0};

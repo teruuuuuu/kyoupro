@@ -14,8 +14,8 @@ class P09Spec extends FunSpec with DiagrammedAssertions {
       assert(P09.pack(List(1, 1)) == List(List(1, 1)))
       assert(P09.pack(List(1, 1, 2)) == List(List(1, 1), List(2)))
       assert(P09.pack(List(1, 1, 2, 3)) == List(List(1, 1), List(2), List(3)))
-      assert(
-        P09.pack(List(1, 1, 2, 2, 3)) == List(List(1, 1), List(2, 2), List(3)))
+      assert(P09.pack(List(1, 1, 2, 2, 3)) == List(List(1, 1), List(2, 2), List(3)))
+      assert(P09.pack(List(1, 1, 2, 2, 3, 1)) == List(List(1, 1), List(2, 2), List(3), List(1)))
     }
   }
 }
