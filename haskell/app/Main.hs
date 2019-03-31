@@ -2,7 +2,7 @@ module Main where
 import Text.Printf
 
 -- import AtCoder.Beginner.Q111.D
-import TopCoder.CrazyBot.CrazyBot
+import TopCoder.BatchSystem.BatchSystem
 
 main :: IO ()
 main = do
