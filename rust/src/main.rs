@@ -1,7 +1,7 @@
 extern crate kyoupro;
+use kyoupro::atcoder::beginner::q121::d;
 
 fn main() {
-
-//    kyoupro::atcoder::beginner::q110::a::answer();
-    kyoupro::topcoder::crazybot::crazybot::answer();
+  // c::answer(2, 5, vec![4, 2], vec![9, 4]);
+  d::main();
 }
