@@ -1,6 +1,5 @@
 package atcoder.beginner.q149
 
-// TODO: WA
 object QE {
   def main(args: Array[String]): Unit = {
     val sc = new java.util.Scanner(System.in)
@@ -17,76 +16,60 @@ object QE {
 
 class QE(n: Int, m: Long, a: Array[Long]) {
   private val r = Array.fill(n)(0L)
-  r(0) = a(0)
+  r(0) = a.head
   for (i <- 1 until n) {
     r(i) = r(i - 1) + a(i)
   }
-  private val vb = a.zipWithIndex.foldLeft(Map.empty[Long, Int])((acc, cur) =>
-    acc + (cur._1 -> cur._2)
-  )
 
-  def findIndex(v: Long): Int = {
-    def findIndex(left: Int, right: Int, v: Long): Int = {
-      if (right - left > 1) {
-        val mid = left + (right - left) / 2
-        if (a(mid) >= v) {
-          findIndex(mid, right, v)
+  def searchIndex(p: Long) = {
+    if (p > a.head) {
+      -1
+    } else if (p <= a.last) {
+      a.length - 1
+    } else {
+      var left = 0
+      var right = a.length
+      while (left < right) {
+        val mid = (left + right) / 2
+        if (a(mid) < p) {
+          right = mid
         } else {
-          findIndex(left, mid, v)
-        }
-      } else {
-        if(a(right) >= v) {
-          vb(a(right))
-        } else {
-          vb(a(left))
+          left = mid + 1
         }
       }
-    }
-
-    if(a.head >= v) {
-      findIndex(0, n - 1, v)
-    } else {
-      -1
+      left - 1
     }
   }
 
-  def findVal(): Long = {
-    def findVal(left: Long, right: Long): Long = {
-      if (right - left > 1) {
-        val mid = left + (right - left) / 2
-
-        var count = 0
-        a.foreach { i =>
-          findIndex(mid - i) match {
-            case v if v >= 0 => {
-              count = count + v + 1
-            }
-            case _ => {}
-          }
-        }
-        if (count >= m) {
-          findVal(mid, right)
-        } else {
-          findVal(left, mid)
-        }
-      } else left
+  def numHandShake(p: Long) = {
+    a.foldLeft(0L) { (acc, cur) =>
+      acc + searchIndex(p - cur) + 1
     }
-
-    findVal(0, Math.pow(10, 5).toInt * 2 + 1)
   }
 
-  def search(): Long = findVal()
+  def search() = {
+    var left = 0L
+    var right = a.head * 2 + 1
+    while (left + 1 < right) {
+      val mid = (left + right) / 2
+      if (numHandShake(mid) < m) {
+        right = mid
+      } else {
+        left = mid
+      }
+    }
+    left
+  }
 
-  def ans: Long = {
-    val x = search()
+  def ans = {
+    val p = search()
+    val c = numHandShake(p)
 
-    val ret = a.foldLeft((0L, 0L))((acc, cur) => {
-      val v = x - cur
-      findIndex(v) match {
-        case i if i >= 0 => (acc._1 + r(i) + cur * (i + 1), acc._2 + i + 1)
+    a.foldLeft((0L))((acc, cur) => {
+      searchIndex(p - cur) match {
+        case x if x >= 0 => acc + r(x) + cur * (x + 1)
         case _ => acc
       }
-    })
-    ret._1 + (m - ret._2) * x
+    }) - (c - m) * p
   }
 }
