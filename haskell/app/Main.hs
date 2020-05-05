@@ -1,8 +1,8 @@
 module Main where
 import Text.Printf
 
--- import AtCoder.Beginner.Q111.D
-import TopCoder.BatchSystem.BatchSystem
+import AtCoder.Beginner.Q165.A
+-- import TopCoder.BatchSystem.BatchSystem
 
 main :: IO ()
 main = do

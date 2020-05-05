@@ -12,19 +12,19 @@ pub fn main() {
       .map(|e| e.parse().ok().unwrap())
       .collect()
   }
-  let ab = read_vec::<u64>();
+  let k = read::<i32>();
+  let ab = read_vec::<i32>();
   let a = ab[0];
   let b = ab[1];
-  println!("{}", solve(a, b));
-}
 
-pub fn solve(a: u64, b: u64) -> u64 {
-  f(a - 1) ^ (f(b))
-}
-fn f(x: u64) -> u64 {
-  if x % 2 == 0 {
-    x ^ (x / 2 % 2)
+  if (k - (a % k)) % k <= b - a {
+    println!("OK");
   } else {
-    f(x + 1) ^ (x + 1)
+    println!("NG");
   }
 }
+
+// #[test]
+// fn test() {
+//   main();
+// }

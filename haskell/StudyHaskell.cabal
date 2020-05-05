@@ -25,6 +25,7 @@ library
                        , AtCoder.Beginner.Q111.B
                        , AtCoder.Beginner.Q111.C
                        , AtCoder.Beginner.Q111.D
+                       , AtCoder.Beginner.Q165.A
                        , TopCoder.CrazyBot.CrazyBot
                        , TopCoder.BatchSystem.BatchSystem
   build-depends:       base >= 4.7 && < 5
