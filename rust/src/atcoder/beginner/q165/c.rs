@@ -63,10 +63,10 @@ impl Calculator {
   }
 }
 
-#[test]
-fn comp() {
-  main();
-}
+// #[test]
+// fn comp() {
+//   main();
+// }
 
 fn main() {
   let s = stdin();
@@ -119,7 +119,7 @@ fn main() {
   );
 }
 
-#[test]
-fn test() {
-  main();
-}
+// #[test]
+// fn test() {
+//   main();
+// }

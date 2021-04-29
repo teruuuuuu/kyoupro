@@ -1,0 +1,14 @@
+name:                beginner-q086
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable beginner-q086-a
+  hs-source-dirs:      .
+  main-is:             a.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+
+

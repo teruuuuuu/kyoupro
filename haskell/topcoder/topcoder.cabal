@@ -1,0 +1,21 @@
+name:                topcoder
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable topcoder-batch_system
+  hs-source-dirs:      .
+  main-is:             batch_system.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , containers
+  default-language:    Haskell2010
+
+executable topcoder-crazy_bot
+  hs-source-dirs:      .
+  main-is:             crazy_bot.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+
