@@ -22,7 +22,7 @@
   });
 })( main, 2);
 
-function main(input: string[]) {
+export function main(input: string[]) {
   let n:number = Number(input[0]);
   let h:number[] = input[1].split(/ +/).map(x => Number(x));
 
