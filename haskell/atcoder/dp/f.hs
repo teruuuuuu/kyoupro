@@ -8,7 +8,9 @@ import Data.Vector.Generic ((!))
 main = sol <$> get >>= putStrLn
 
 -- get = C.words <$> C.getContents
-get = replicateM 2 $ C.getLine
+get = f >>= pure . concat
+  where
+    f = replicateM 2 $ C.words <$> C.getLine
 
 sol [s,t] = lcs s t
 
