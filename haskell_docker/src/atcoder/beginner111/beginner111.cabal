@@ -1,0 +1,70 @@
+-- filepath: /root/src/atcoder/beginner111/beginner111.cabal
+cabal-version: >=1.10
+name:                beginner111
+version:             0.1.0.0
+synopsis:            A simple Haskell project
+description:         This is a simple Haskell project.
+category:            Development
+license:             BSD3
+
+-- library
+--   exposed-modules:    A
+--   hs-source-dirs:     .
+--   build-depends:      base >= 4.7 && < 5
+--   default-language:   Haskell2010
+
+-- stack exec beginner111-a
+executable beginner111-a
+  hs-source-dirs:      .
+  main-is:             A.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+-- stack test beginner111:beginner111-test-a
+test-suite beginner111-test-a
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      .
+  main-is:             SpecA.hs
+  build-depends:       base >= 4.7 && < 5
+                       , hspec
+  default-language:    Haskell2010
+
+-- stack exec beginner111-b
+executable beginner111-b
+  hs-source-dirs:      .
+  main-is:             B.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+-- stack test beginner111:beginner111-test-b
+test-suite beginner111-test-b
+  type:               exitcode-stdio-1.0
+  hs-source-dirs:     .
+  main-is:            SpecB.hs
+  build-depends:      base >= 4.7 && < 5
+                      , hspec
+  default-language:   Haskell2010
+
+-- stack exec beginner111-c
+executable beginner111-c
+  hs-source-dirs:      .
+  main-is:             C.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , containers
+  default-language:    Haskell2010
+
+-- stack exec beginner111-d
+executable beginner111-d
+  hs-source-dirs:      .
+  main-is:             D.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , containers
+  default-language:    Haskell2010
+
+custom-setup
+  setup-depends:       base >= 4.7 && < 5
+                       , Cabal >= 1.10

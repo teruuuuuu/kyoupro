@@ -1,0 +1,33 @@
+# name: my-haskell-project
+# version: 0.1.0.0
+# synopsis: A simple Haskell project
+# description: This is a simple Haskell project.
+# category: Development
+# author: Your Name
+# maintainer: your.email@example.com
+# license: BSD3
+# extra-source-files:
+#   - README.md
+
+# dependencies:
+#   - base >= 4.7 && < 5
+
+# library:
+#   source-dirs: src/atcoder/beginner111
+#   exposed-modules: MyLib
+#   other-modules: []
+#   hs-source-dirs:
+#     - src/atcoder/beginner111
+
+# executables:
+#   my-haskell-project-exe:
+#     main: Main.hs
+#     source-dirs: app
+
+# tests:
+#   my-haskell-project-test:
+#     main: Spec.hs
+#     source-dirs: test
+#     dependencies:
+#       - my-haskell-project
+#       - hspec
