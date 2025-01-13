@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  
+  dev-c: &dev-c-settings
+    image: dev-c
+    container_name: dev-c
+    ports:
+      - "22:22"
+    volumes:
+      - "./.vscode:/root/.vscode"
+      - "./.vscode-server:/root/.vscode-server"
+      - "./src:/root/src"
+      - "./build:/root/build"
+      - "./scripts:/root/scripts"
+      - "./CMakeLists.txt:/root/CMakeLists.txt"
+
+  # dev-cpp-build:
+  #   <<: *dev-cpp-settings
+  #   container_name: dev-cpp-build
+  #   command: /bin/bash -c "cd /root/build && cmake .. && make"
+
+  # dev-cpp-test:
+  #   <<: *dev-cpp-settings
+  #   container_name: dev-cpp-build
+  #   command: /bin/bash -c "cd /root/build && cmake .. && make && find ./test  -type f -executable | /bin/bash"
+

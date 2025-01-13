@@ -1,0 +1,31 @@
+-- filepath: /root/src/atcoder/beginner111/beginner111.cabal
+cabal-version: >=1.10
+name:                topcoder
+version:             0.1.0.0
+synopsis:            A simple Haskell project
+description:         This is a simple Haskell project.
+category:            Development
+license:             BSD3
+
+
+-- stack exec topcoder-crazybot
+executable topcoder-crazybot
+  hs-source-dirs:      .
+  main-is:             crazy_bot.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:      base >= 4.7 && < 5
+                      , containers
+  default-language:    Haskell2010
+
+-- stack exec topcoder-batchsystem
+executable topcoder-batchsystem
+  hs-source-dirs:      .
+  main-is:             batchsystem.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:      base >= 4.7 && < 5
+                      , containers
+  default-language:    Haskell2010
+
+custom-setup
+  setup-depends:       base >= 4.7 && < 5
+                       , Cabal >= 1.10

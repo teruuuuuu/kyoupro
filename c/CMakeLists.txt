@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.31 FATAL_ERROR)
+
+project(devc LANGUAGES C)
+
+# C23を指定
+set(CMAKE_C_STANDARD 23)
+
+# C23の機能を利用する場合はSTRICTオプションを設定
+set(CMAKE_C_STANDARD_REQUIRED TRUE)
+set(CMAKE_C_EXTENSIONS OFF)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+include(GNUInstallDirs)
+
+add_subdirectory(./src)
+
