@@ -1,0 +1,147 @@
+cabal-version: >=1.10
+name:                dp
+version:             0.1.0.0
+synopsis:            A simple Haskell project
+description:         This is a simple Haskell project.
+category:            Development
+license:             BSD3
+
+-- https://atcoder.jp/contests/dp?lang=ja
+
+-- library
+--   exposed-modules:    A
+--   hs-source-dirs:     .
+--   build-depends:      base >= 4.7 && < 5
+--   default-language:   Haskell2010
+
+-- stack exec dp-a_1
+executable dp-a_1
+  hs-source-dirs:      .
+  main-is:             A_1.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , array
+  default-language:    Haskell2010
+
+-- stack exec dp-a_2
+executable dp-a_2
+  hs-source-dirs:      .
+  main-is:             A_2.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+  default-language:    Haskell2010
+
+-- stack exec dp-a_3
+executable dp-a_3
+  hs-source-dirs:      .
+  main-is:             A_3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , containers
+  default-language:    Haskell2010
+
+-- stack exec dp-a_4
+executable dp-a_4
+  hs-source-dirs:      .
+  main-is:             A_4.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , containers
+                       , mtl
+  default-language:    Haskell2010
+
+-- stack exec dp-b_1
+executable dp-b_1
+  hs-source-dirs:      .
+  main-is:             B_1.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+  default-language:    Haskell2010
+
+-- stack exec dp-b_2
+executable dp-b_2
+  hs-source-dirs:      .
+  main-is:             B_2.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+  default-language:    Haskell2010
+
+-- stack exec dp-c_1
+executable dp-c_1
+  hs-source-dirs:      .
+  main-is:             C_1.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , mtl
+  default-language:    Haskell2010
+
+-- stack exec dp-d_1
+executable dp-d_1
+  hs-source-dirs:      .
+  main-is:             D_1.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , mtl
+  default-language:    Haskell2010
+
+-- stack exec dp-e_1
+executable dp-e_1
+  hs-source-dirs:      .
+  main-is:             E_1.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , mtl
+  default-language:    Haskell2010
+
+-- stack exec dp-e_2
+executable dp-e_2
+  hs-source-dirs:      .
+  main-is:             E_2.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , mtl
+  default-language:    Haskell2010
+
+
+-- stack exec dp-e_3
+executable dp-e_3
+  hs-source-dirs:      .
+  main-is:             E_3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                       , bytestring
+                       , vector
+                       , mtl
+  default-language:    Haskell2010
+
+-- stack test beginner111:beginner111-test-a
+-- test-suite beginner111-test-a
+--   type:                exitcode-stdio-1.0
+--   hs-source-dirs:      .
+--   main-is:             SpecA.hs
+--   build-depends:       base >= 4.7 && < 5
+--                        , hspec
+--   default-language:    Haskell2010
+
+
+custom-setup
+  setup-depends:       base >= 4.7 && < 5
+                       , Cabal >= 1.10
