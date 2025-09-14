@@ -3,6 +3,7 @@ resolver: lts-23.2
 packages:
   - src/topcoder
   - src/atcoder/beginner111
+  - src/atcoder/beginner422
   - src/atcoder/dp
   # - src/util
 
